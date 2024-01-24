@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>padding-bottom实现纵横比</title>
+    <style>
+    .demoWrapper{
+        padding: 10px;
+        background: white;
+        box-sizing: border-box;
+        /* 设置元素是否可调节尺寸 */
+        resize: horizontal;
+        border: 1px dashed;
+        overflow: auto;
+        max-width: 100%;
+        height: calc(100vh - 16px);
+    }
+    div {
+        width: 100%;
+        /* 高度随着宽度变化，且保持纵横比 */
+        padding-bottom: 75%;
+        background: green; 
+    }
+
+    </style>
+</head>
+<body>
+    <div class="demoWrapper">
+        <div></div>
+    </div>
+</body>
+</html>
