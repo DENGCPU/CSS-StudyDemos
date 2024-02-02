@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO-发现实现不了</title>
+    <style>
+        .box{
+            overflow: hidden;
+        }
+        .list{
+            float: left;
+            width: calc(25%-1.5rem/4);
+            margin-bottom: .5rem;
+        }
+        .list:not(:nth-child(4n+1)){
+            margin-left: .5rem;
+        }
+        .cover {
+            padding: 100% 100% 0 0;
+            position: relative;
+        }
+        .cover img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            /* object-fit CSS 属性指定可替换元素（例如：<img> 或 <video>）的内容应该如何适应到其使用高度和宽度确定的框 */
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+   <div>
+    <h3>实现原理：需要三层标签，一层宽度，一层确定高宽，最后图片填充。</h3>
+    <ul class="box">
+        <li class="list">
+            <div class="cover">
+                <img src="./assets/1.jpg" alt="">
+            </div>
+        </li>
+        <li class="list">
+            <div class="cover">
+                <img src="./assets/2.jpg" alt="">
+            </div>
+        </li>
+        <li class="list">
+            <div class="cover">
+                <img src="./assets/3.jpg" alt="">
+            </div>
+        </li>
+        <li class="list">
+            <div class="cover">
+                <img src="./assets/4.jpg" alt="">
+            </div>
+        </li>
+        <li class="list">
+            <div class="cover">
+                <img src="./assets/5.jpg" alt="">
+            </div>
+        </li>
+    </ul>
+   </div>
+</body>
+</html>
