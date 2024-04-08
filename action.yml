@@ -1,0 +1,9 @@
+name: CSS-demo
+description: This is an action test
+author: Dorothy
+branding: 
+ icon: 'paperclip'
+ color: 'white'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
